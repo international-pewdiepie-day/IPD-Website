@@ -1,0 +1,11 @@
+.navbar-brand{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+}
+.carousel-image{
+    width: 100vw;
+    height: 90vh;
+}
