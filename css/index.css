@@ -1,11 +1,25 @@
 .navbar-brand{
-    position: absolute;
-    width: 100%;
-    left: 0;
+    width: 100vw;
     text-align: center;
-    margin:0 auto;
+    position: absolute;
+    left: 0;
+    margin: 0 auto;
+    top: 15%;
 }
+
 .carousel-image{
     width: 100vw;
     height: 90vh;
+}
+
+.navbar-toggler{
+    position: absolute;
+    right: 5vw;
+}
+
+@media (max-width: 921px){
+    .navbar-brand{
+        position: relative;
+        width: auto;
+    }
 }
