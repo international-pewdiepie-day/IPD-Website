@@ -1,14 +1,16 @@
 'use strict';
+// TODO: put more stuff into config, if we are gonna use config
 (function(){
-    const config = $.getJSON("config.json", (json) => {
 
+    const config = $.getJSON("./js/config.json", (json) => {
         console.log(json);
     });
 
     $(document).ready(() => {
         getSubCount();
         countdown();
-    });
+        console.log(config);
+});
     
     function getSubCount(){
         let requestURL = "https://bastet.socialblade.com/youtube/lookup?query=UC-lHJZR3Gqxm24_Vd_AJ5Yw";
@@ -18,7 +20,9 @@
         }).done((value) => {
             $('.subcountLeft').html(100000000 - value);
         });
+
         setInterval(getSubCount, 7000);
+        setTimeout(getSubCount, 30000);
     }
 
     function countdown(){
@@ -33,6 +37,6 @@
         $('.minutes_left').html(Math.floor((time_remaining % (1000 * 60 * 60)) / (1000 * 60)));
         $('.seconds_left').html(Math.floor((time_remaining % (1000 * 60)) / 1000));
         
-        setInterval(countdown, 1000);
+        setTimeout(countdown, 1000);
     }
 })();
