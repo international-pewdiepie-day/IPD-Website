@@ -1,19 +1,19 @@
 'use strict';
 // TODO: put more stuff into config, if we are gonna use config
 (function(){
-    const config = $.getJSON("./config.json", (json) => {
+    const config = $.getJSON("./js/config.json", (json) => {
 
         console.log(json);
     });
 
     $(document).ready(() => {
         getSubCount();
-        setInterval(getSubCount, 30000);
+        setInterval(getSubCount, 30000)
         // countdown();
     });
     
     function getSubCount(){
-        requestURL = "https://bastet.socialblade.com/youtube/lookup?query=UC-lHJZR3Gqxm24_Vd_AJ5Yw";
+        var requestURL = "https://bastet.socialblade.com/youtube/lookup?query=UC-lHJZR3Gqxm24_Vd_AJ5Yw";
         $.ajax({
             method: "GET",
             url: requestURL
