@@ -17,7 +17,7 @@
     <meta name="theme-color" content="#de003d">
     <meta name="description" content="placeholder">
     <meta name="author" content="placeholder">
-    <title>Home | International Pewdiepie Day</title>
+    <title>Home | International PewDiePie Day</title>
     <!-- Icons -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
@@ -28,7 +28,7 @@
     <nav id="mainNav" class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand mx-auto" href="#">
             <img src="./assets/brofist.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-            <span id="spanPewdiepie" style="font-family:'Roboto',sans-serif; font-weight: 100;">Pewdiepie</span><span id="spanDay" style="font-family:'Roboto',sans-serif; font-weight:400;">Day</span>
+            <span id="spanPewdiepie" style="font-family:'Roboto',sans-serif; font-weight: 100;">PewDiePie</span><span id="spanDay" style="font-family:'Roboto',sans-serif; font-weight:400;">Day</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="navbar-toggler-icon"></span>
@@ -97,7 +97,7 @@
                     </h5>
                     <p>
                         something here
-                    </p>
+                    </p>0
                 </div>
             </div>
         </div>
@@ -118,14 +118,39 @@
             <button type="button" class="btn btn-dark">Button Text</button>
         </div>
         <div class="pad-50"></div>
+        <div class="container text-center">            
+            <h1 class="display-4">Number of Days Left</h1>
+            <div class="pad-50"></div>
+            <div class="row">
+                <div class="col-3">
+                    <div class="odometerTimer days_left display-4">0</div>
+                    <p>Days</p>
+                </div>
+                <div class="col-3">
+                    <div class="odometerTimer hours_left display-4">0</div>
+                    <p>Hours</p>
+                </div>
+                <div class="col-3">
+                    <div class="odometerTimer minutes_left display-4">0</div>
+                    <p>Minute</p>
+                </div>
+                <div class="col-3">
+                    <div class="odometerTimer seconds_left display-4">0</div>
+                    <p>Seconds</p>
+                </div>
+            </div>
+        </div>
+        <div class="pad-50"></div>
         <div class="container text-center">
             <h1 class="display-4">News</h1>
             <div class="pad-50"></div>
             <div id="newsCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- TEST THIS (margin-bottom for indicator for visibility and inverting the icons color)
+                        <ol style="margin-bottom: -1.5rem; filter: invert(1);" class="carousel-indicators">
+                    -->
                     <ol class="carousel-indicators">
                       <li data-target="#newsCarousel" data-slide-to="0" class="active"></li>
                       <li data-target="#newsCarousel" data-slide-to="1"></li>
-                      <li data-target="#newsCarousel" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
@@ -157,10 +182,24 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="..." class="d-block w-100" alt="...">
+                            <div class="row mx-auto no-gutters">
+                                <div class="col-sm-4">
+                                    <div class="card mx-auto" style="width: 20vw;">
+                                        <img src="https://dummyimage.com/600x400/000/fff.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Example Text 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="card mx-auto" style="width: 20vw;">
+                                        <img src="https://dummyimage.com/600x400/000/fff.png" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <p class="card-text">Example Text 2</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
@@ -183,7 +222,7 @@
                     <p class="lead text-light">Donec mollis efficitur iaculis. Praesent non commodo risus, eu finibus lorem. Nam nec justo vitae mi finibus iaculis volutpat sed odio. Vivamus vitae arcu tempor turpis imperdiet placerat. Ut non quam eu diam suscipit convallis. Mauris dictum, lacus ac gravida euismod, tortor leo interdum ante, quis facilisis arcu nulla ut ipsum. Donec consequat pharetra ligula in fringilla. Fusce in tellus congue, maximus risus sed, tempus massa. Curabitur sem erat, tempus et elit in, accumsan malesuada sapien. Quisque laoreet id metus a congue.</p>
                 </div>
             </div>
-            <span class="text-muted">&copy; International Pewdiepie Day Team 2019</span>
+            <span class="text-muted">&copy; International PewDiePie Day Team 2019</span>
         </div>
     </footer>
 
@@ -206,6 +245,5 @@
     <!--Libraries-->
     <script src="lib/odometer.js"></script>
     <!--JS-->
-    <script src="js/config.js"></script>
     <script src="js/index.js"></script>
 </body>
