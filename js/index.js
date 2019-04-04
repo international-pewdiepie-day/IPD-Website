@@ -8,7 +8,7 @@
 
     $(document).ready(() => {
         getSubCount();
-        setInterval(getSubCount, 30000)
+        setInterval(getSubCount, 30000);
         // countdown();
     });
     
