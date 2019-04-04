@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Bootstrap Dependencies -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- CSS -->
@@ -16,12 +16,18 @@
     <meta name="description" content="placeholder">
     <meta name="author" content="placeholder">
     <title>Home | International Pewdiepie Day</title>
+    <!--JS-->
+    <script src="js/config.js"></script>
+    <script src="js/index.js"></script>
     <!-- Icons -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <!--Libraries-->
+    <script src="lib/odometer.js"></script>
+    <link rel="stylesheet" href="lib/odometer.css">
 </head>
-<body>
-    <nav id="mainNav" class="navbar fixed-to navbar-expand-md navbar-dark bg-dark">
+<body class="bg-dark">
+    <nav id="mainNav" class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand mx-auto" href="#">
             <img src="./assets/brofist.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             <span style="font-family:'Roboto',sans-serif; font-weight: 100;">Pewdiepie</span><span style="font-family:'Roboto',sans-serif; font-weight:400;">Day</span>
@@ -45,7 +51,11 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item text-center pr-3 text-white subcount_nav_item">
+                    <p>Subscribers Left to Goal</p>
+                    <div id="odometer" class="odometer subcountLeft h5"></div>
+                </li>
+                <li class="nav-item align-self-center">
                     <a class="nav-link" href="#"><button type="button" class="btn btn-primary">Do Your Part!</button></a>
                 </li>
             </ul>
@@ -101,4 +111,34 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <p class="lead">Donec mollis efficitur iaculis. Praesent non commodo risus, eu finibus lorem. Nam nec justo vitae mi finibus iaculis volutpat sed odio. Vivamus vitae arcu tempor turpis imperdiet placerat. Ut non quam eu diam suscipit convallis. Mauris dictum, lacus ac gravida euismod, tortor leo interdum ante, quis facilisis arcu nulla ut ipsum. Donec consequat pharetra ligula in fringilla. Fusce in tellus congue, maximus risus sed, tempus massa. Curabitur sem erat, tempus et elit in, accumsan malesuada sapien. Quisque laoreet id metus a congue.</p>
+            <button type="button" class="btn btn-dark">Button Text</button>
+        </div>
+        <div class="pad-50"></div>
+        <div class="container text-right">
+            <h1 class="display-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <p class="lead">Donec mollis efficitur iaculis. Praesent non commodo risus, eu finibus lorem. Nam nec justo vitae mi finibus iaculis volutpat sed odio. Vivamus vitae arcu tempor turpis imperdiet placerat. Ut non quam eu diam suscipit convallis. Mauris dictum, lacus ac gravida euismod, tortor leo interdum ante, quis facilisis arcu nulla ut ipsum. Donec consequat pharetra ligula in fringilla. Fusce in tellus congue, maximus risus sed, tempus massa. Curabitur sem erat, tempus et elit in, accumsan malesuada sapien. Quisque laoreet id metus a congue.</p>
+            <button type="button" class="btn btn-dark">Button Text</button>
+        </div>
+        <div class="pad-50"></div>
+        <div class="container text-center">
+            <h1 class="display-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+            <p class="lead">Donec mollis efficitur iaculis. Praesent non commodo risus, eu finibus lorem. Nam nec justo vitae mi finibus iaculis volutpat sed odio. Vivamus vitae arcu tempor turpis imperdiet placerat. Ut non quam eu diam suscipit convallis. Mauris dictum, lacus ac gravida euismod, tortor leo interdum ante, quis facilisis arcu nulla ut ipsum. Donec consequat pharetra ligula in fringilla. Fusce in tellus congue, maximus risus sed, tempus massa. Curabitur sem erat, tempus et elit in, accumsan malesuada sapien. Quisque laoreet id metus a congue.</p>
+            <button type="button" class="btn btn-dark">Button Text</button>
+        </div>
+    </div>
+    <footer class="border-top border-dark bg-dark py-2">
+        <div class="container text-center">
+            <div class="jumbotron jumbotron-fluid bg-dark">
+                <div class="container">
+                    <h1 class="display-4 text-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h1>
+                    <p class="lead text-light">Donec mollis efficitur iaculis. Praesent non commodo risus, eu finibus lorem. Nam nec justo vitae mi finibus iaculis volutpat sed odio. Vivamus vitae arcu tempor turpis imperdiet placerat. Ut non quam eu diam suscipit convallis. Mauris dictum, lacus ac gravida euismod, tortor leo interdum ante, quis facilisis arcu nulla ut ipsum. Donec consequat pharetra ligula in fringilla. Fusce in tellus congue, maximus risus sed, tempus massa. Curabitur sem erat, tempus et elit in, accumsan malesuada sapien. Quisque laoreet id metus a congue.</p>
+                </div>
+            </div>
+            <span class="text-muted">© International Pewdiepie Day Team 2019</span>
+        </div>
+    </footer>
 </body>
