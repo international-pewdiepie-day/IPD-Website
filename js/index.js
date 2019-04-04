@@ -1,4 +1,5 @@
 'use strict';
+// TODO: put more stuff into config, if we are gonna use config
 (function(){
     const config = $.getJSON("./config.json", (json) => {
 
@@ -7,6 +8,7 @@
 
     $(document).ready(() => {
         getSubCount();
+        setInterval(getSubCount, 30000);
         // countdown();
     });
     
@@ -18,7 +20,6 @@
         }).done((value) => {
             $('.subcountLeft').html(100000000 - value);
         });
-        setTimeout(getSubCount, 30000);
     }
 
     function countdown(){
