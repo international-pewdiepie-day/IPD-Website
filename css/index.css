@@ -9,3 +9,6 @@
         transform: translateX(-50%);
     }
 }
+.subcount_nav_item > *{
+    margin: 0;
+}

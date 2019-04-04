@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
     <!-- Bootstrap Dependencies -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- CSS -->
@@ -16,12 +16,18 @@
     <meta name="description" content="placeholder">
     <meta name="author" content="placeholder">
     <title>Home | International Pewdiepie Day</title>
+    <!--JS-->
+    <script src="js/config.js"></script>
+    <script src="js/index.js"></script>
     <!-- Icons -->
     <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <!--Libraries-->
+    <script src="external/odometer.js"></script>
+    <link rel="stylesheet" href="external/odometer.css">
 </head>
 <body>
-    <nav id="mainNav" class="navbar fixed-to navbar-expand-md navbar-dark bg-dark">
+    <nav id="mainNav" class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
         <a class="navbar-brand mx-auto" href="#">
             <img src="./assets/brofist.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             <span style="font-family:'Roboto',sans-serif; font-weight: 100;">Pewdiepie</span><span style="font-family:'Roboto',sans-serif; font-weight:400;">Day</span>
@@ -45,7 +51,11 @@
                 </li>
             </ul>
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item text-center pr-3 text-white subcount_nav_item">
+                    <p>Subscribers Left to Goal</p>
+                    <div id="odometer" class="odometer subcountLeft h5"></div>
+                </li>
+                <li class="nav-item align-self-center">
                     <a class="nav-link" href="#"><button type="button" class="btn btn-primary">Do Your Part!</button></a>
                 </li>
             </ul>
@@ -101,4 +111,9 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
+    <footer class="fixed-bottom border-top border-dark">
+        <div class="container text-center">
+            <span class="text-muted ">Copright content</span>
+        </div>
+    </footer>
 </body>
