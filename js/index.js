@@ -2,6 +2,13 @@
 // TODO: put more stuff into config, if we are gonna use config
 (function () {
 
+    var od = new Odometer({
+        el: document.querySelector('.subcountLeft'),
+        value: 0,
+        format: '(,ddd)',
+        duration: 3000
+    })
+
     const config = $.getJSON("./js/config.json", (json) => {
         console.log(json);
     });
@@ -9,7 +16,6 @@
     $(document).ready(() => {
         getSubCount();
         countdown();
-        console.log(config);
     });
 
     function getSubCount() {
@@ -18,10 +24,10 @@
             method: "GET",
             url: requestURL
         }).done((value) => {
-            $('.subcountLeft').html(100000000 - value);
+            od.update(value);
         });
 
-        setInterval(getSubCount, 7000);
+        setInterval(getSubCount, 10000);
     }
 
     function countdown() {
@@ -36,6 +42,6 @@
         $('.minutes_left').html(Math.floor((time_remaining % (1000 * 60 * 60)) / (1000 * 60)));
         $('.seconds_left').html(Math.floor((time_remaining % (1000 * 60)) / 1000));
 
-        setTimeout(countdown, 1000);
+        setInterval(countdown, 1000);
     }
 })();

@@ -1,13 +1,16 @@
+@font-face {
+    font-family: CircularStd-Book;
+    src: url("../assets/CircularStd-Book.woff") format("woff");
+}
+@font-face {
+    font-family: CircularStd-Bold;
+    src: url("../assets/CircularStd-Bold.woff") format("woff");
+}
+
 .carousel-image{
     width: 100vw;
-    height: 95vh;
-}
-@media (min-width: 768px) {
-    .navbar-brand{
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+    height: 90vh;
+    margin-top: 80px;
 }
 .subcount_nav_item > *{
     margin: 0;
@@ -15,11 +18,58 @@
 .pad-50{
     height: 50px;
 }
-#spanPewdiepie, #spanDay{
-    font-family:'Roboto',sans-serif; 
-    font-weight: 100;
+#mainNav{
+    background-color: #ff003f;
+}
+#ipd-title, .nav-link{
+    font-family: 'CircularStd-Bold', sans-serif;
+    font-weight: bolder;
+    font-size: 12px;
+}   
+#ipd-title{
+    color: #fff;
+}
+.nav-link{
+    font-size: 20px;
+}
+.odometerTimer{
+    color: #ff003f;
+}
+h1{
+    font-family: 'CircularStd-Bold', sans-serif;
+    font-weight: bolder; 
+    font-size: 3em; 
+    font-weight: 200;
+}
+p{
+    font-family: 'CircularStd-Book', sans-serif;
+    font-size: 1.55em;
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+}
+.banner-content{
+    color: #fff;
+}
+.carousel-content-btn{
+    font-family: 'CircularStd-Bold', sans-serif;
+    padding: 10px 20px;
+    font-size: 2em;
+    font-weight: 500;
+    background-color: #ff003f;
+    color: #fff;
+    border: none;
+    margin-top: 25px;
 }
 
-.odometerTimer{
-    color: #de003d;
+@media (min-width: 922px){
+    .nav-link{
+        max-height: 100%;
+        background-color: #ff003f;
+        color: #fff;
+    }
+    .nav-link:hover, .active > .nav-link{
+        background-color: #fff;
+        color: #000 !important;
+    }
 }
