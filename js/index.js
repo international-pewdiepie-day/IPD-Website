@@ -1,14 +1,6 @@
 'use strict';
 // TODO: put more stuff into config, if we are gonna use config
 (function () {
-
-    var od = new Odometer({
-        el: document.querySelector('.subcountLeft'),
-        value: 0,
-        format: '(,ddd)',
-        duration: 3000
-    })
-
     const config = $.getJSON("./js/config.json", (json) => {
         console.log(json);
     });
@@ -24,7 +16,7 @@
             method: "GET",
             url: requestURL
         }).done((value) => {
-            od.update(value);
+            $('.subcountLeft').html(value);
         });
 
         setInterval(getSubCount, 10000);
