@@ -13,8 +13,8 @@ html, body{
 }
 .carousel-image{
     width: 100vw;
-    min-height: 100vh;
-    margin-top: 80px;
+    height: 100vh;
+    object-fit: cover;
 }
 .subcount_nav_item > *{
     margin: 0;
@@ -27,22 +27,19 @@ html, body{
 }
 #ipd-title, .nav-link{
     font-family: 'CircularStd-Bold', sans-serif;
-    font-weight: bolder;
     font-size: 12px;
 }   
 #ipd-title{
+    font-weight: bolder;
     color: #fff;
 }
 .nav-link{
     font-size: 20px;
 }
-.odometerTimer{
-    color: #ff003f;
-}
 h1{
     font-family: 'CircularStd-Bold', sans-serif;
     font-weight: bolder; 
-    font-size: 3em; 
+    font-size: 2.5em; 
     font-weight: 200;
 }
 p{
@@ -93,6 +90,14 @@ p{
 }
 #WhoIsPewDiePie-Span{
     display: block;
+}
+.sticky-social{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 45%;
+    right: 0;
+    background-color: #ff003f;
 }
 
 @media (min-width: 922px){
