@@ -1,34 +1,25 @@
+const currentDate = new Date().getDate(); 
+
 $(document).ready(() => {
-    dateTimeFiller();
-})
-
-const daysLeft = 22 - new Date().getDate(); 
-const currentDate = new Date().getDate();
-
-function dateTimeFiller(){
-    if($('.date-time-div > .row').length < daysLeft){
-        let count = $('.date-time-div > .row').length;
-        $('.date-time-div').append(
-            "<div class='row'>"
-                + "<div class='col'>"
-                    + "<label class='red-pewds-font'>Date:</label>"
-                    + "<input type='date' value='2019-04-" + (currentDate + count) + "' min='2019-04-" + currentDate + "' max='2019-04-22'>"
-                + "</div>"
-                + "<div class='col'>"
-                    + "<label class='red-pewds-font'>Start Time:</label>"
-                    + "<input type='time' value='06:00'>"
-                + "</div>"
-                + "<div class='col'>"
-                    + "<label class='red-pewds-font'>End Time:</label>"
-                    + "<input type='time' value='22:00'>"
-                + "</div>"
-            + "</div>"
-        )
+    for(i=0; i<(29 - currentDate); i++){
+        $('#available-date').append("<input type='checkbox' class='ml-3'>" + (i+currentDate))
     }
+    updateCountryDropdown();
+});
+
+function updateCountryDropdown(){
+    countryList.forEach((country) => {
+        $('#countryDropdown').append("<option data-country='" + country + "'>" + country + "</option>");
+    });
+    updateCitiesDropdown();
 }
 
-function dateTimeRemover(){
-    if($('.date-time-div > .row').length > 1){
-        $('.date-time-div > .row:last-child').remove();
-    }
+function updateCitiesDropdown(){
+    let e = document.getElementById("countryDropdown");
+    $.ajax({
+        method: "GET",
+        url: "https://pewdiepieday.com/api/getCities?country="+e.options[e.selectedIndex].text
+    }).done((value) => {
+        console.log(value);
+    });
 }

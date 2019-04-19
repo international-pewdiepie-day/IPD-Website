@@ -38,33 +38,19 @@
                     <small class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">  
-                    <label class="red-pewds-font">Available Time</label>
-                    <div class="date-time-div"></div>
-                    <div class="row mt-1">
-                        <div class="col">
-                            <a href="javascript:void(0);" onclick="dateTimeFiller()">Add another date</a>
-                        </div>
-                        <div class="col">
-                            <a href="javascript:void(0);" onclick="dateTimeRemover()">Remove last entry</a>
-                        </div>
+                    <label class="red-pewds-font">Available Dates</label>
+                    <div id="available-date">
+
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="red-pewds-font">Country</label>
-                    <select class="country form-control form-control-sm">
-                        <option>Temp 1</option>
-                        <option>Temp 2</option>
-                        <option>Temp 3</option>
-                        <option>Temp 4</option>
+                    <select id="countryDropdown" onchange="updateCitiesDropdown()" class="country form-control form-control-sm">
                     </select>
                 </div>
                 <div class="form-group">
                     <label class="red-pewds-font">City</label>
-                    <select class="country form-control form-control-sm">
-                        <option>Temp 1</option>
-                        <option>Temp 2</option>
-                        <option>Temp 3</option>
-                        <option>Temp 4</option>
+                    <select id="citiesDropdown" class="country form-control form-control-sm">
                     </select>
                 </div>
                 <div class="form-group">
@@ -85,5 +71,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!--JS-->
+    <script src="../js/country.js"></script>
     <script src="../js/form.js"></script>
 </body>
