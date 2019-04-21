@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+    <!-- DNS PREFETCH -->
+    <link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com/">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+    <link rel="dns-prefetch" href="https://code.jquery.com/">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com/">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/form.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/form.css">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,400">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Info -->
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#de003d">
+    <meta name="description" content="placeholder">
+    <meta name="author" content="placeholder">
+    <title>Home | International PewDiePie Day</title>
+    <!-- Icons -->
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <!--JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="../js/country.js"></script>
+    <script src="../js/form.js"></script>
+</head>
+<body>
+    <div class="nav">
+        <a class=" m-3 text-white d-flex align-items-center" href="#">
+            <img src="../assets/left_arrow.svg">
+            <p style='font-size: 1.2em;' class="p-0 m-0">Home</p>
+        </a>
+    </div>
+    <div class="irl-form">
+        <div class="row">
+            <div class="col-sm-4 text-white" style="background-color: #000;">
+                <h1 class="text-center">IRL <br /> CAMPAIGN</h1>
+                <div class="container">
+                    <p>Welcome to the [International PewDiePie Day In-Real-Life Campaigning] registration form.</p>
+                    <p>You will be asked to submit personal information about yourself in order to get notified about IRL-C (In-Real-Life Campaigning). We will treat your personal details in strict compliance with the Data Protection Act. If we wish to collect and use data in any other way, we will ask your express permission at the point of collection.</p>
+                    <p>If you do not wish us to use your details in this way, or wish to change or amend your details or contact us for any reason, contact us on our Discord server: <a href="https://discord.gg/PeWDaDb">https://discord.gg/PeWDaDb</a></p>
+                </div>
+            </div>
+            <div class="col-sm-8 bg-white d-flex align-items-center">
+                <div class="container pt-3 pb-3">
+                    <form method="POST" action="#">
+                        <div class="form-group">
+                            <label class="red-pewds-font">Email</label>
+                            <input required type="email" name="irl-member-email" class="form-control" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">    
+                            <label class="red-pewds-font">Discord Name (with four digits) or any other social media </label>
+                            <input required type="text" name="irl-member-social" class="form-control" placeholder="Enter your social media to get in contact">
+                        </div>
+                        <div class="form-group">  
+                            <label class="red-pewds-font">Will you show up if there is an IRL meet up?</label>
+                            <div id="available-date">
+                                <input class="ml-3" type="radio" value="yes" name="irl-meet-up" checked="checked"><span class="ml-2 m-0 p-0">Yes</span><br />
+                                <input class="ml-3" type="radio" value="no" name="irl-meet-up"><span class="ml-2 m-0 p-0">No</span><br />
+                            </div>
+                        </div>
+                        <div class="form-group">  
+                            <label class="red-pewds-font">Dates you will be free</label>
+                            <div id="available-date">
+                                <input class="ml-3" type="checkbox" name="irl-27-april"><span class="ml-2 m-0 p-0">27th April</span><br />
+                                <input class="ml-3" type="checkbox" name="irl-28-april"><span class="ml-2 m-0 p-0">28th April</span><br />
+                                <input class="ml-3" type="checkbox" name="irl-29-april"><span class="ml-2 m-0 p-0">29th April</span><br />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="red-pewds-font">Country</label>
+                            <select id="countryDropdown" onchange="updateCitiesDropdown()" class="country form-control form-control-sm">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="red-pewds-font">City</label>
+                            <select id="citiesDropdown" class="country form-control form-control-sm">
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <button onsubmit="submitForm()" class="btn btn-outline-danger btn-lg center-block">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    </script>
+    <!-- Bootstrap Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
