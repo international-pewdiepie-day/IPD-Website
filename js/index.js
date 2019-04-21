@@ -1,5 +1,14 @@
 'use strict';
 // TODO: put more stuff into config, if we are gonna use config
+
+document.addEventListener('scroll', () => {
+    let scroll_pos = $(this).scrollTop();
+    if(scroll_pos >= $('#switching-point').offset().top)
+        $('.sticky-social').css({'flex-direction': 'column', 'bottom': '25%'});
+    else
+        $('.sticky-social').css({'flex-direction': 'row', 'bottom': '0%'});
+});
+
 (function () {
     const config = $.getJSON("./js/config.json", (json) => {
         console.log(json);

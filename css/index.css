@@ -37,7 +37,7 @@ html, body{
     font-size: 20px;
 }
 h1{
-    font-family: 'CircularStd-Bold', sans-serif;
+    font-family: CircularStd-Bold, sans-serif;
     font-weight: bolder; 
     font-size: 2.5em; 
     font-weight: 200;
@@ -54,13 +54,13 @@ p{
 }
 .carousel-content-btn{
     font-family: 'CircularStd-Bold', sans-serif;
-    padding: 10px 20px;
+    padding: 10px;
     font-size: 2em;
     font-weight: 500;
     background-color: #ff003f;
-    color: #fff;
+    color: #fff !important;
     border: none;
-    margin-top: 25px;
+    cursor: pointer;
 }
 .carousel-content-btn:hover{
     color: #fff;
@@ -93,11 +93,11 @@ p{
 }
 .sticky-social{
     position: fixed;
-    display: flex;
-    flex-direction: column;
-    top: 45%;
+    flex-direction: row;
     right: 0;
+    bottom: 0;
     background-color: #ff003f;
+    z-index: 100;
 }
 
 @media (min-width: 922px){
