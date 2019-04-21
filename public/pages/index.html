@@ -28,17 +28,32 @@
 <body class="bg-white">
     <!-- Top Navbar-->
     <nav id="mainNav" class="navbar fixed-top navbar-expand-md navbar-dark">
-        <div class="d-flex w-100">
-            <img src="../assets/brofist.svg" class="align-self-center" width="50" height="50" alt="">
-            <div id="ipd-title" class="d-flex flex-column ml-2">
-                <span>INTERNATIONAL</span>
-                <span>PEWDIEPIE</span>
-                <span>DAY</span>
-            </div>   
-        </div>
-        <div class="nav-item justify-self-end" style="white-space: nowrap;">
-            <a class="nav-link" href="form.html">IRL Form</a>
-        </div>   
+        <a href="#">
+            <div class="d-flex">
+                <img src="../assets/brofist.svg" class="align-self-center" width="50" height="50" alt="">
+                <div id="ipd-title" class="d-flex flex-column ml-2">
+                    <span>INTERNATIONAL</span>
+                    <span>PEWDIEPIE</span>
+                    <span>DAY</span>
+                </div>   
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse pt-3 justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="poster.html">Posters</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="form.html">IRL Form</a>
+                </li>
+            </ul>
+        </div> 
     </nav>
     <!-- Main Image Carousel -->
     <div id="image-carousel" class="carousel slide" data-ride="carousel" style="margin-top: 70px;">
@@ -75,7 +90,7 @@
                     <p class="banner-content">A banner will fly in New York</p>
                     <p class="banner-content"> on April 29th thanking PewDiePie</p>
                     <p style="margin-bottom: 25px;" class="banner-content">We need your help to make it a reality.</p>
-                    <a target="_blank" href="https://www.youtube.com/watch?v=rc1VR54nHV0" class="carousel-content-btn">Go Fund Me Page</a>
+                    <a target="_blank" href="https://www.gofundme.com/ne4wv3-flying-a-pewdiepie-banner-for-his-9th-anniversary" class="carousel-content-btn">Go Fund Me Page</a>
                 </div>
             </div>
             <div class="carousel-item">
@@ -99,7 +114,7 @@
                     <p class="banner-content">From spreading the word through social media</p>
                     <p class="banner-content">to creating games and fanart for Pewds,</p>
                     <p style="margin-bottom: 25px;" class="banner-content pt-2">YOU CAN MAKE A DIFFERENCE!</p>
-                    <a href="#" class="carousel-content-btn">IPD Posters</a>
+                    <a href="poster.html" class="carousel-content-btn">IPD Posters</a>
                 </div>
             </div>
         </div>
@@ -245,7 +260,7 @@
             </div>
         </div>
     </div>  
-        <!-- Footer -->
+    <!-- Footer -->
     <footer style="background: url(../assets/wave-dark.png) no-repeat center center fixed;">
         <div class="container text-center">
             <div class="jumbotron jumbotron-fluid bg-transparent">

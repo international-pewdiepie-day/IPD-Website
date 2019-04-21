@@ -28,16 +28,39 @@
     <script src="../js/form.js"></script>
 </head>
 <body>
-    <div class="nav">
-        <a class=" m-3 text-white d-flex align-items-center" href="#">
-            <img src="../assets/left_arrow.svg">
-            <p style='font-size: 1.2em;' class="p-0 m-0">Home</p>
+    <nav id="mainNav" class="navbar fixed-top navbar-expand-md navbar-dark">
+        <a href="index.html">
+            <div class="d-flex">
+            <img src="../assets/brofist.svg" class="align-self-center" width="50" height="50" alt="">
+                <div id="ipd-title" class="d-flex flex-column ml-2">
+                    <span>INTERNATIONAL</span>
+                    <span>PEWDIEPIE</span>
+                    <span>DAY</span>
+                </div>   
+            </div>
         </a>
-    </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse pt-3 justify-content-end">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="poster.html">Posters</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="form.html">IRL Form</a>
+                </li>
+            </ul>
+        </div> 
+    </nav>
     <div class="irl-form">
         <div class="row">
             <div class="col-sm-4 text-white" style="background-color: #000;">
-                <h1 class="text-center">IRL <br /> CAMPAIGN</h1>
+                <h1 class="text-center mt-4">IRL <br /> CAMPAIGN</h1>
+                <p class="text-center"><u>Terms & Condition</u></p>
                 <div class="container">
                     <p>Welcome to the [International PewDiePie Day In-Real-Life Campaigning] registration form.</p>
                     <p>You will be asked to submit personal information about yourself in order to get notified about IRL-C (In-Real-Life Campaigning). We will treat your personal details in strict compliance with the Data Protection Act. If we wish to collect and use data in any other way, we will ask your express permission at the point of collection.</p>
@@ -79,6 +102,9 @@
                             <label class="red-pewds-font">City</label>
                             <select id="citiesDropdown" class="country form-control form-control-sm">
                             </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="termsCond"><span class="ml-2 m-0 p-0">You agree to the Terms & Condition</span><br />
                         </div>
                         <div class="text-center">
                             <button onsubmit="submitForm()" class="btn btn-outline-danger btn-lg center-block">Submit</button>

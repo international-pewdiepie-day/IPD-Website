@@ -40,7 +40,12 @@ h1{
 .nav-link{
     font-size: 20px;
 }
-.nav-link:hover, .active > .nav-link{
+.nav-link{
+    max-height: 100%;
+    background-color: #ff003f;
+    color: #fff;
+}
+.nav-link:hover{
     background-color: #fff;
     color: #000 !important;
 }
@@ -60,7 +65,7 @@ h1{
 .poster-download-btn{
     font-family: 'CircularStd-Bold', sans-serif;
     padding: 10px;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: 500;
     background-color: #000;
     color: #fff !important;
@@ -75,7 +80,6 @@ h1{
     background-color: #ff003f;
     z-index: 100;
 }
-
 .disclaimer{
     position: fixed;
     display: flex;

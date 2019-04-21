@@ -26,20 +26,22 @@
 })();
 
 function submitForm(){
-    let country = document.getElementById("countryDropdown");
-    let cities = document.getElementById("citiesDropdown");
-    $.ajax({
-        method: "POST",
-        url: "https://pewdiepieday.com/api/submitForm",
-        data: {
-            'email': $('input[name=irl-member-email]').val(),
-            'socialContact': $('input[name=irl-member-social]').val(),
-            'meetShowUp': $('input[name=irl-meet-up]:checked').val(),
-            '27thApril': $('input[name=irl-27-april]').prop('checked'),
-            '28thApril': $('input[name=irl-28-april]').prop('checked'),
-            '29thApril': $('input[name=irl-29-april]').prop('checked'),
-            'country': country.options[country.selectedIndex].text,
-            'cities': cities.options[cities.selectedIndex].text
-        }
-    });
+    if($('input[name=termsCond]').prop('checked')){
+        let country = document.getElementById("countryDropdown");
+        let cities = document.getElementById("citiesDropdown");
+        $.ajax({
+            method: "POST",
+            url: "https://pewdiepieday.com/api/submitForm",
+            data: {
+                'email': $('input[name=irl-member-email]').val(),
+                'socialContact': $('input[name=irl-member-social]').val(),
+                'meetShowUp': $('input[name=irl-meet-up]:checked').val(),
+                '27thApril': $('input[name=irl-27-april]').prop('checked'),
+                '28thApril': $('input[name=irl-28-april]').prop('checked'),
+                '29thApril': $('input[name=irl-29-april]').prop('checked'),
+                'country': country.options[country.selectedIndex].text,
+                'cities': cities.options[cities.selectedIndex].text
+            }
+        });
+    }
 }

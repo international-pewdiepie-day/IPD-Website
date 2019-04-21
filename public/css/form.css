@@ -6,25 +6,28 @@
     font-family: CircularStd-Bold;
     src: url("../assets/CircularStd-Bold.woff") format("woff");
 }
-
 body { 
-    background: url('../assets/wave.png') no-repeat center center fixed; 
+    background: url('../assets/wave-dark.png') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     overflow: auto;
 }
-
-.nav{
-    background-color: #000;
-    height: 80px;
-    width: 100vw;
-    max-width: 100vw;
-    position: fixed;
-    top: 0;
+#mainNav{
+    background-color: #ff003f;
 }
-
+#ipd-title, .nav-link{
+    font-family: 'CircularStd-Bold', sans-serif;
+    font-size: 12px;
+}   
+#ipd-title{
+    font-weight: bolder;
+    color: #fff;
+}
+.nav-link{
+    font-size: 20px;
+}
 .irl-form{
     position: absolute;
     top: 25px;
@@ -32,7 +35,6 @@ body {
     transform: translate(-50%, 80px);
     width: 90vw;
 }
-
 h1{
     font-family: 'CircularStd-Bold', sans-serif;
 }
@@ -40,7 +42,6 @@ p{
     font-family: 'CircularStd-Book', sans-serif;
     font-size: 1.35em;
 }
-
 .submit-form{
     width: 90vw;
     border: 1px solid #f9013f;
@@ -48,7 +49,16 @@ p{
     border-radius: 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 922px) {
+    .nav-link{
+        max-height: 100%;
+        background-color: #ff003f;
+        color: #fff;
+    }
+    .nav-link:hover{
+        background-color: #fff;
+        color: #000 !important;
+    }
     .irl-form{
         position: absolute;
         top: 50%;

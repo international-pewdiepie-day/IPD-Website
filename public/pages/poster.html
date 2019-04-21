@@ -28,14 +28,16 @@
     <div class="main-content">
         <!-- Top Navbar-->
         <nav id="mainNav" class="navbar fixed-top navbar-expand-md navbar-dark">
-            <div class="d-flex">
-                <img src="../assets/brofist.svg" class="align-self-center" width="50" height="50" alt="">
-                <div id="ipd-title" class="d-flex flex-column ml-2">
-                    <span>INTERNATIONAL</span>
-                    <span>PEWDIEPIE</span>
-                    <span>DAY</span>
-                </div>   
-            </div>
+            <a href="index.html">
+                <div class="d-flex">
+                    <img src="../assets/brofist.svg" class="align-self-center" width="50" height="50" alt="">
+                    <div id="ipd-title" class="d-flex flex-column ml-2">
+                        <span>INTERNATIONAL</span>
+                        <span>PEWDIEPIE</span>
+                        <span>DAY</span>
+                    </div>   
+                </div>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -90,7 +92,7 @@
                     </div>
                 </div>
                 <div class="container mb-3">
-                    <a class="navbar-brand d-inline-flex" href="#">
+                    <a class="navbar-brand d-inline-flex" href="index.html">
                         <img src="../assets/brofist.svg" class="align-self-center" width="50" height="50" alt="">
                         <div id="ipd-title" class="d-flex flex-column ml-1">
                             <span>INTERNATIONAL</span>
@@ -111,10 +113,16 @@
     </div>
     <div class="disclaimer">
         <div class="container text-center d-flex flex-column align-items-center">
-            <h1 class="mb-3" style="color: #ff003f;">Disclaimer before proceeding to download the posters</h1>
+            <h1 class="mb-3" style="color: #ff003f;">Disclaimer</h1>
             <p class="mb-3">By entering this site, I will abide by the following precedent: I confirm that I will not illegally, according to the active, local laws and/or codes, in my area, display any poster, flyer, sticker, or other visuals on this site.</p>
-            <button onclick="acceptDisclaimer()" style="background-color: #ff003f;" class="poster-download-btn mb-3">I accept</button>
-            <a style="background-color: #ff003f; text-decoration: none" class="poster-download-btn mb-3" href="index.html">Home</a>
+            <div class="row" style="white-space: nowrap">
+                <div class="col-sm mb-3">
+                    <a onclick="acceptDisclaimer()" style="background-color: #ff003f;" class="poster-download-btn">I accept</a>
+                </div>
+                <div class="col-sm mb-3">
+                    <a style="background-color: #ff003f; text-decoration: none" class="poster-download-btn" href="index.html">Home</a>
+                </div>
+            </div>
         </div>
     </div>
     <!-- Inline css loading (Makes websites faster)-->

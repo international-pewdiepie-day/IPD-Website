@@ -119,7 +119,7 @@ p{
     .card{
         width: 20vw;
     }
-    .nav-link:hover, .active > .nav-link{
+    .nav-link:hover{
         background-color: #fff;
         color: #000 !important;
     }
