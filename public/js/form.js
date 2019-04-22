@@ -29,13 +29,17 @@ function submitForm(){
     if($('input[name=termsCond]').prop('checked')){
         let country = document.getElementById("countryDropdown");
         let cities = document.getElementById("citiesDropdown");
+        let meetShowUpResult = true
+        if($('input[name=irl-meet-up]:checked').val() == 'no')
+            meetShowUpResult = false
+
         $.ajax({
             method: "POST",
             url: "https://pewdiepieday.com/api/submitForm",
             data: {
                 'email': $('input[name=irl-member-email]').val(),
                 'socialContact': $('input[name=irl-member-social]').val(),
-                'meetShowUp': $('input[name=irl-meet-up]:checked').val(),
+                'meetShowUp': meetShowUpResult,
                 '27thApril': $('input[name=irl-27-april]').prop('checked'),
                 '28thApril': $('input[name=irl-28-april]').prop('checked'),
                 '29thApril': $('input[name=irl-29-april]').prop('checked'),
